@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Button, Row, Col, Image } from "react-bootstrap";
-import exterior_car1 from "../images/exterior_car1.png";
-import exterior_car2 from "../images/exterior_car2.png";
-import exterior_car3 from "../images/exterior_car3.png";
-import exterior_car4 from "../images/exterior_car4.png";
-import Interior from '../components/Interior.jsx';
+import exterior_car1 from "..//../images/exterior_car1.png";
+import exterior_car2 from "..//../images/exterior_car2.png";
+import exterior_car3 from "..//../images/exterior_car3.png";
+import exterior_car4 from "..//../images/exterior_car4.png";
+import Interior from '../Interior';
 import styled from "styled-components";
 
 export const Styled = styled.div`
@@ -45,10 +45,12 @@ h1 {
 }
 `;
 
-const Exterior = () => {
+const ExteriorZeekr = () => {
+  
 return (
     <>
     <Styled>
+        
     <Container>
        <h1>Экстерьер</h1>
        <Container style={{display: "flex"}}>
@@ -77,8 +79,7 @@ return (
                 <Image className="img_car4" src={exterior_car4} />
             </Col>
         </Row>
-       </Container>
-
+       </Container> 
     </Container>
     </Styled>
     <Interior />
@@ -86,4 +87,4 @@ return (
 )
 };
 
-export default Exterior;
+export default ExteriorZeekr;

@@ -27,11 +27,11 @@ background: #1E1E1E;
     position: relative;
     top: 30%;
     right: 156px;     
-      }
+    }
     .img_car6 {
     position: relative;
     top: 30%;
-    right: 117%;     
+    right: 193%;     
   }
   .btn-group_car {
     display: flex;
@@ -46,14 +46,13 @@ background: #1E1E1E;
   font-size: 20px;
   border: 0.5px solid #ffffff0f;
   background-color: rgb(255 255 255 / 0%)!important;
-  border-right: 1px solid white;
   border-bottom: 1px solid rgb(253 264 277 / 21%);
   border-top: 1px solid rgb(253 264 277 / 21%);
   border-radius: 10px !important;
   }
   .btn:active {
    border: 1px solid white;
-    color: white!;
+   color: white!;
   }
 }
 `;
@@ -70,7 +69,7 @@ return (
         </Row>
           <Container class="btn-group_car">
             <span style={{ color: "white", fontSize: "40px" }}>Zeekr</span>
-            <Button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <Button type="button" className="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Все модели<span style={{ marginLeft: "10px" }}>&gt;</span>
             </Button>
           </Container>

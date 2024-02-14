@@ -4,7 +4,7 @@ import interior_car1 from "../images/interior_car1.png";
 import interior_car2 from "../images/interior_car2.png";
 import interior_car3 from "../images/interior_car3.png";
 import interior_car4 from "../images/interior_car4.png";
-import { Styled } from "../components/Exterior";
+import { Styled } from "../components/Exeterior__Car/ExteriorZeekr";
 
 
 const Interior = () => {

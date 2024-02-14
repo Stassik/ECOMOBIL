@@ -5,14 +5,16 @@ import styled from "styled-components";
 import Card_1 from '../images/Card _1.png';
 import Card_2 from '../images/Card _2.png';
 import Card_3 from '../images/Card _3.png';
-import Exterior from "./Exterior.jsx";
+import ExteriorTab from "./Exeterior__Car/ExteriorTab.jsx";
 import Choice from '../components/Choice.jsx';
-
+import ElectroCar from "./electro__Car.jsx";
+import Price from "./Price.jsx";
 
 const Styled = styled.div`
 background: #181818;
 .container {
     display: flex;
+    }
 .card_01 {
     width: 390px;
     height: 366px;
@@ -29,7 +31,7 @@ background: #181818;
     width: 512px;
     height: 430px;
     position: relative;
-    top: 306px
+    top: 306px;
 }
 }
 `;
@@ -38,7 +40,7 @@ return (
     <>
     <Styled>
     <Container style={{maxWidth: "1440px"}}>
-        <img src={main_car}/>
+        <img className="main__car" src={main_car}/>
         </Container>
    <Container style={{paddingBottom: "26%"}}>
         <img className="card_01" src={Card_1} alt="Card_1"/>
@@ -46,8 +48,10 @@ return (
         <img className="card_03"src={Card_3}alt="Card_3" />
     </Container>
     </Styled>
-    <Exterior />
+    <ExteriorTab />
     <Choice />
+    <ElectroCar />
+    <Price />
     </>
 )
 };

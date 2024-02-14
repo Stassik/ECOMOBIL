@@ -5,6 +5,8 @@ import choice_car2 from '../images/choice_car2.png';
 import choice_car3 from '../images/choice_car3.png';
 import styled from "styled-components";
 import ChoiceCar from "./Choice__car.jsx";
+import BasicModelsCar from "./BasicModels.jsx";
+import ExclusiveModels from "./ExclusiveModels.jsx";
 
 export const Styled = styled.div`
 background: #1E1E1E;
@@ -51,7 +53,7 @@ height: 51px;
 font-size: 20px;
 border: 0.5px solid #ffffff0f;
 background-color: rgb(255 255 255 / 0%)!important;
-border-right: 1px solid white;
+// border-right: 1px solid white;
 border-bottom: 1px solid rgb(253 264 277 / 21%);
 border-top: 1px solid rgb(253 264 277 / 21%);
 border-radius: 10px !important;
@@ -81,8 +83,8 @@ const Choice = () => {
         </Row>
           <Container class="btn-group_car">
             <span style={{ color: "white", fontSize: "40px" }}>Voyah</span>
-            <Button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Все модели<span style={{ marginLeft: "10px" }}>&gt;</span>
+            <Button type="button" className="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Все модели<span style={{ marginLeft: "10px" }}>&gt;</span>
             </Button>
           </Container>
           <Row>
@@ -100,6 +102,8 @@ const Choice = () => {
         </Container>
       </Styled>
       <ChoiceCar />
+      <BasicModelsCar />
+      <ExclusiveModels />
     </>
   )
 };
