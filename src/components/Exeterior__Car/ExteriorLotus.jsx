@@ -15,7 +15,7 @@ return (
        <h1>Экстерьер</h1>
        <Container style={{display: "flex"}}>
         <Button>Lotus Eletre</Button>
-        {/* <Button>Huawei Aito M9</Button>  */}
+        <Button>Huawei Aito M9</Button> 
        </Container>
        <Container style={{display: "flex"}}>
         <Row>

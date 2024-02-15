@@ -5,66 +5,93 @@ import Seetting from '../images/logo/Setting.png';
 import img_car from '../images/img_car.png';
 
 const Styled = styled.div`
-display: flex;
-.img__car {
-    position: absolute;
-    left: 0;
-    width: 127%;
+color: #FFFFFF;
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
-.electrocarClass {
+.img__car {
+    height: 100%;
+    width: auto;
+}
+.container_btn {
+    position: relative;
+    bottom: 46rem;
+    left: -2rem;
+}
+.content {
     padding: 60px 0 50px 0;
     z-index: 1;
     display flex;
+    position: absolute;
 
 }
 .btn {
     position: relative;
-    top: 0;
-    left: -67px;
+    border: none;
+    // display: block;
     font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
     height: 107px;
-    width: 720px;
-    border-radius: 28px;
+    min-width: 720px;
+    border-radius: 10px;
     background-color: transparent !important;
-    border-left: transparent;
 }
 .btn:active {
-    border: 1px solid white;
+border: 1px solid white !important;
+}
+.btn svg {
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+.btn svg rect {
+    fill: transparent;
+    stroke-width: 1.5px;
+    height: 107px;
+    min-width: 720px;
+    stroke-dasharray: 400;
 }
 .setting {
     position: relative;
-    top: -37%;
-    left: 150%;
+    left: 23rem;
+}
+
+.posts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 .posts1 {
-    z-index: 1;
-    color: #FFFFFF;
     position: relative;
-    top: 251px;
-    right: 640px;
+    bottom: 42rem;
+    left: 7rem;
 
 }
 .posts2 {
-z-index: 1;
-color: #FFFFFF;
-bottom: 168px;
-left: 416px;
+    bottom: 50rem;
+    left: 34rem;
 position: relative;
 }
 .posts3 {
-z-index: 1;
-color: #FFFFFF;
 position: relative;
-top: 524px;
-right: 944px;
+bottom: 45rem;
+left: 6rem;
 }
-.text-title {
+
+.text-title1 {
     font-weight: bold;
-    width: 127%;
+    width: 1%;
 }
-.text-title_1 {
+.text-title2 {
+    font-weight: bold;
+}
+
+.text-title3 {
 font-weight: bold;
-width: 262%;
+width: 46%;
 }
 p {
     font-size: 20px;
@@ -72,33 +99,42 @@ p {
 `;
 
 const ElectroCar = () => {
-return (
-    <>
-    <Styled>
-    <Container style={{paddingBottom: "90px"}}>
-        <Image src={img_car} className="img__car" />
-    </Container>
-    <Container className="electrocarClass">
-    <Button variant="secondary">Почему электрокары?</Button>
-    <Image src={Seetting} alt="setting" className="setting"/>
-    </Container>
-    <Container className="posts1">
-        <h2 className="text-title">Экологическая дружественность</h2>
-        <p style={{ width: "110%", padding: "20px 0 0 0"}}>Предоставление современных и экологически чистых решений в области транспорта</p>
-        <Container className="posts2">
-        <h2 className="text-title">Экономия ресурсов</h2>
-        <p style={{width: "251%"}}>Электро-и гибридные автомобили — шаг в будущее и выгодное вложение в собственные финансы благодаря экономии на топливе и обслуживании</p>
-        </Container>
-    </Container>
-    <Container className="posts3">
-        <h2 className="text-title_1">Эколого-экономическая эффективность</h2>
-        <p style={{width: "446%"}}>Мы стремимся снизить воздействие на окружающую среду, предлагая клиентам электромобили, которые работают на чистой энергии. Наш выбор транспортных средств способствует уменьшению выбросов вредных веществ и содействует сохранению природы</p>
-    </Container>
+    return (
+        <>
+            <Styled>
+                <Container>
+                    <div className="container-img">
+                        <Image src={img_car} className="img__car" />
+                    </div>
+                    <div className="content">
+                        <div className="container_btn">
+                            <Button>
+                                <svg>
+                                    <linearGradient id="linear-gradient"> <stop offset="0%" stop-color="rgba(255, 255, 255, 0)" /> <stop offset="100%" stop-color="rgba(255, 255, 255, 1)" /> </linearGradient> <rect stroke="url(#linear-gradient)" rx="10px" ry="10px" />
+                                </svg>Почему электрокары ?</Button>
+                            <Image src={Seetting} alt="setting" className="setting" />
+                        </div>
 
-   
-    </Styled>
-    </>
-)
+                        <div className="posts">
+                            <div className="posts1">
+                                <h2 className="text-title1">Экологическая дружественность</h2>
+                                <p style={{ width: "27%" }}>Предоставление современных и экологически чистых решений в области транспорта</p>
+
+                            </div>
+                            <div className="posts2">
+                                <h2 className="text-title2">Экономия ресурсов</h2>
+                                <p style={{ width: "46%" }}>Электро-и гибридные автомобили — шаг в будущее и выгодное вложение в собственные финансы благодаря экономии на топливе и обслуживании</p>
+                            </div>
+                            <div className="posts3">
+                                <h2 className="text-title3">Эколого-экономическая эффективность</h2>
+                                <p style={{ width: "78%" }}>Мы стремимся снизить воздействие на окружающую среду, предлагая клиентам электромобили, которые работают на чистой энергии. Наш выбор транспортных средств способствует уменьшению выбросов вредных веществ и содействует сохранению природы</p>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </Styled>
+        </>
+    )
 };
 
 export default ElectroCar;
